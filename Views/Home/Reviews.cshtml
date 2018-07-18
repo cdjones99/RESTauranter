@@ -1,0 +1,10 @@
+<h1>See Reviews:</h1>
+
+
+    @foreach(var review in ViewBag.allreviews) {
+        <p>@review.restaurant</p>
+        <p>@review.reviewer</p>
+        <p>@review.review</p>
+        <p>@review.date_visited</p>
+        <p>@review.rating</p>
+    }

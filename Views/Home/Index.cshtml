@@ -1,0 +1,32 @@
+﻿@model Restauranter.Models.Review
+
+<h1>Write a new Review:</h1>
+
+<form asp-action="newReview" method="POST">
+
+<label>Restaurant:</label>
+<input asp-for="restaurant" type="text"><br>
+<span asp-validation-for="restaurant"></span>
+
+<label>Reviewer Name:</label>
+<input asp-for="reviewer" type="text"><br>
+<span asp-validation-for="reviewer"></span>
+
+<label>Review:</label>
+<input type="text" asp-for="review"><br>
+<span asp asp-validation-for="review"></span>
+
+<label>Date Added:</label>
+<input type="date" asp-for="date_visited"><br>
+<span asp-validation-for="date_visited"></span>
+
+<p>Rating: <select asp-for="rating">
+  <option value=1>1</option>
+  <option value=2>2</option>
+  <option value=3>3</option>
+  <option value=4>4</option>
+  <option value=5>5</option>
+</select></p>
+
+<button type="submit">Submit</button>
+</form>
